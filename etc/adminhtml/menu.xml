@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Corra_Integration::corra" title="C O R R A" module="Corra_Integration" sortOrder="51" resource="Corra_Integration::corra"/>
+		<add id="Corra_Integration::log" title="Logs" module="Corra_Integration" sortOrder="20" parent="Corra_Integration::corra" action="integration/log" resource="Corra_Integration::log"/>
+    </menu>
+</config>

@@ -1,0 +1,33 @@
+{
+  "name": "corra/integration",
+  "description": "Integration",
+  "require": {
+    "php": "7.0.2|7.0.4|~7.0.6|~7.1.0"
+  },
+  "homepage": "https://git.magecom.net/project/corracompose",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "authors": [
+    {
+      "name": "CORRA"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Corra\\Integration\\": ""
+    }
+  },
+  "repositories": {
+    "corra-integration": {
+      "type": "git",
+      "url": "https://git.magecom.net/project/corracompose.git"
+    }
+  }
+}

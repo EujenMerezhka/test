@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="corra" translate="label" sortOrder="200">
+            <label>Corra Extensions</label>
+        </tab>
+        <section id="int_config" translate="label" type="text" sortOrder="100" showInDefault="1"
+                 showInWebsite="1" showInStore="1">
+            <label>Integrations</label>
+            <tab>corra</tab>
+            <resource>Corra_Integration::int_config</resource>
+            <group id="log_config" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Log Config</label>
+                <field id="enable_logging" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Logging</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="ftp" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>SFTP Config</label>
+                <field id="enable_ftp" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable SFTP upload</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable FTP upload</comment>
+                </field>
+                <field id="host" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Host Address</label>
+                    <comment>Please enter Address</comment>
+                    <depends>
+                        <field id="enable_ftp">1</field>
+                    </depends>
+                </field>
+                <field id="port" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Port</label>
+                    <comment>Please enter SFTP Port Number(eg : 22)</comment>
+                    <depends>
+                        <field id="enable_ftp">1</field>
+                    </depends>
+                </field>
+                <field id="username" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Username</label>
+                    <comment>Please enter username</comment>
+                    <depends>
+                        <field id="enable_ftp">1</field>
+                    </depends>
+                </field>
+                <field id="password" translate="label" type="password" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Password</label>
+                    <comment>Please enter Password</comment>
+                    <depends>
+                        <field id="enable_ftp">1</field>
+                    </depends>
+                </field>
+                <field id="directory" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Directory</label>
+                    <depends>
+                        <field id="enable_ftp">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
